@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
+
+/* ── NAVBAR ── */
+
+nav {
+display: flex;
+background-color: rgba(51, 49, 49, 0.562);
+align-items: left;
+justify-content: left; 
+/* z-index: 20; */
+padding: 18px 40px; 
+width: 100%;
+gap: 20px;
+
+}
+
+.nav-links {
+display: flex;
+gap: 25px;
+list-style: none;
+align-items: left;
+}
+
+.nav-links a {
+    color: white;
+ text-decoration: none;
+ font-size: 20px;
+    font-weight: 900;
+    font-style: bold;
+    justify-content: flex-start;
+}
+
+.nav-links a:hover {
+  color: purple;
+} 
+
+.logo {
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  /* width: 100%;
+  height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+.hero-image {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.993), rgb(0, 0, 0)),
+        url('../Assets/ship.jpg') center/cover no-repeat;
+    height: 500px;
+    width: 6000px;     
+background-blend-mode: overlay;
+margin: -20px;
+}
+
+.hero-content {
+  position: absolute;
+  color: white;
+  text-align: center;
+  z-index: 20;  
+}
+
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+}
+
+
+
+
+
+
+
+
+/* 
+/* ── SERVICES SECTION ── */
+/* .services {
+  background: #ffffff;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+/* "Our Services" pill label */
+.section-label {
+  display: inline-block;
+  background: #e0f5f1;          /* light teal background */
+  color: #0e9e89;               /* teal text */
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 22px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  letter-spacing: 0.4px;
+}
+
+/* Main heading */
+.services h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: #0d1117;
+  margin-bottom: 16px;
+}
+
+/* Subtitle paragraph */
+.section-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto 50px;
+}
+
+/* ── CARDS GRID ──
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Single card */
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: left;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+  transform: translateY(-4px);
+}
+
+/* Icon box
+.card-icon {
+  width: 64px;
+  height: 64px;
+  background: #e0f5f1;          /* light teal */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+/* Card title */
+.card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0d1117;
+  margin-bottom: 12px;
+}
+
+/* Card body text */
+.card p {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+} */
+
+/* Learn More link */
+/* .learn-more {
+  color: #0e9e89;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: letter-spacing 0.2s;
+} */
+
+.learn-more:hover {
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+} */
