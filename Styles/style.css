@@ -8,15 +8,16 @@
 
 nav {
 display: flex;
-background-color: rgba(51, 49, 49, 0.562);
-align-items: left;
-justify-content: left; 
-/* z-index: 20; */
+background: #2e333873;
+align-items: center;
+justify-content: space-between;
+z-index: 50;
 padding: 18px 40px; 
 width: 100%;
 gap: 20px;
-
+position: fixed;
 }
+
 
 .nav-links {
 display: flex;
@@ -41,6 +42,8 @@ align-items: left;
 .logo {
   align-items: center;
   justify-content: center;
+  width: 2px;
+  height: 3px;
 }
 
 
@@ -56,15 +59,18 @@ align-items: left;
   
 }
 
-.hero-image {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.993), rgb(0, 0, 0)),
-        url('../Assets/ship.jpg') center/cover no-repeat;
-    height: 500px;
-    width: 6000px;     
-background-blend-mode: overlay;
-margin: -20px;
-}
+.hero {
+  background-image:url('../Assets/ship.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #0d1117a2;
+  background-attachment: scroll;
+  background-blend-mode: multiply;
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;}
 
 .hero-content {
   position: absolute;
@@ -85,31 +91,29 @@ margin: -20px;
 
 
 
+/* ── SERVICES SECTION */
 
-
-
-
-
-/* 
-/* ── SERVICES SECTION ── */
-/* .services {
+.services {
   background: #ffffff;
-  padding: 80px 60px;
+  padding:60px 60px;
   text-align: center;
+  min-height : 600px;
+  /* justify-content: center; */
 }
 
-/* "Our Services" pill label */
-.section-label {
-  display: inline-block;
-  background: #e0f5f1;          /* light teal background */
-  color: #0e9e89;               /* teal text */
-  font-size: 14px;
-  font-weight: 600;
-  padding: 8px 22px;
+/* "Our Services" button */
+.section-button {
+  background: #c2d3d1;          
+  color: #0e9e89; 
+  width: 250px;
+  height: 50px;            
+  font-size: 20px;
+  font-weight: 600px bold;
+  padding: 2px 22px;
   border-radius: 50px;
   margin-bottom: 24px;
-  letter-spacing: 0.4px;
-}
+  border: none;
+ }
 
 /* Main heading */
 .services h2 {
@@ -128,41 +132,32 @@ margin: -20px;
   margin: 0 auto 50px;
 }
 
-/* ── CARDS GRID ──
+ /* ── CARDS GRID ──*/
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
-  gap: 24px;
-  max-width: 1200px;
+  gap: 20px;
+  width: 95%;
   margin: 0 auto;
+  
 }
 
 /* Single card */
 .card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  
+  /* border: 1px solid #e2e8f0; */
+  border-radius: 20px;
   padding: 32px 28px;
   text-align: left;
-  transition: box-shadow 0.25s, transform 0.25s;
+ border: 1px solid #313131;
+  /* box-shadow: #444; */
+  /* background: #ffffff; */
+  /* transition: box-shadow 0.25s, transform 0.25s; */
 }
 
 .card:hover {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
   transform: translateY(-4px);
-}
-
-/* Icon box
-.card-icon {
-  width: 64px;
-  height: 64px;
-  background: #e0f5f1;          /* light teal */
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  margin-bottom: 24px;
 }
 
 /* Card title */
@@ -179,18 +174,310 @@ margin: -20px;
   color: #555;
   line-height: 1.7;
   margin-bottom: 20px;
-} */
+}
+ 
 
 /* Learn More link */
-/* .learn-more {
+.learn-more {
   color: #0e9e89;
   font-size: 0.92rem;
   font-weight: 600;
   text-decoration: none;
   transition: letter-spacing 0.2s;
-} */
+}
 
 .learn-more:hover {
   letter-spacing: 0.5px;
   text-decoration: underline;
-} */
+}
+
+
+
+/* WHY CHOOSE US SECTION ───────────── */
+
+
+.section-why{
+  background-color: #bce0c7;       
+   width: 100%;
+   padding : 40px 40px;
+         }
+ 
+.intermediary {
+        width: 92%;        
+        padding: 30px 30px;
+        display: flex; 
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0 auto;
+      }
+
+/* Left Why Choose Us */
+
+.cards-grid-left {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  gap: 12px;
+  width: 55%;
+}
+
+.card-why {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical */
+  align-items: center;
+  align-content: center;     /* horizontal */
+  /* text-align: center; */
+  min-height: 150px;
+  border-radius: 20px;
+}
+
+.card-why h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Every p inside any .card-why */
+.card-why p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Card 1 — top left green */
+.card-why:nth-child(1) {
+  grid-column: 1 / 2;  
+  grid-row: 1 / 2;     
+}
+
+/* Card 2 — top right white */
+.card-why:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/* Card 3 — middle left white */
+.card-why:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+/* Card 4 — middle right green */
+.card-why:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* Card 5 — full-width dark */
+.card-why:nth-child(5) {
+  grid-column: 1 / 3;  
+  grid-row: 3 / 4;
+}
+
+
+/* Base: odd = green, even = white */
+.card-why:nth-child(odd)  { background: #1a9e80; color: white; border: #0d1117; }
+.card-why:nth-child(even) { background: white; color: black; border: #0d1117;}
+
+/* Fix the swap */
+.card-why:nth-child(3) { background: white; color: black; }
+.card-why:nth-child(4) { background: #1a9e80; color: white; }
+
+/* Dark full-width overrides everything */
+.card-why:nth-child(5) { background: #1e2a2a; color: #a0c4bc; }
+
+
+
+
+
+/* Right Side */
+
+
+.cards-grid-right {
+  display: grid;
+  /* grid-template-columns: 0.8; */
+  width: 42%;
+}
+
+
+.right-button {           
+  color: #0e9e89; 
+  width: 200px;
+  height: 40px;            
+  font-size: 20px;
+  font-weight: 600px bold;
+  padding: 2px 22px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  border: none;
+ }
+
+.cards-grid-right h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+
+.cards-grid-right .intro {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+/* Each feature row */
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* The globe icon circle */
+.icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;        /* stops it from shrinking */
+  background: #b2ddd6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.feature-text h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 6px;
+}
+
+.feature-text p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+
+/* CARGO SHIP SECTION */
+
+.cargo-ship{
+  background-image:url('../Assets/cargo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #0d1117a2;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Disable fixed on mobile — iOS ignores it anyway */
+@media (max-width: 560px) {
+  .cargo-ship {
+    background-attachment: scroll; 
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+
+/* TRACKING SECTION ───────────── */
+
+.section-tracking {
+  background-color: #f5f5f5;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tracking-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 48px;
+  width: 100%;
+  max-width: 720px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.tracking-label {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.tracking-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.tracking-input {
+  flex: 1;
+  padding: 13px 16px;
+  font-size: 15px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 8px;
+  outline: none;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.tracking-input::placeholder {
+  color: #aaa;
+}
+
+.tracking-input:focus {
+  border-color: #1a9e80;
+}
+
+.tracking-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1a9e80;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.tracking-btn:hover {
+  background-color: #158a6e;
+}
+
+.tracking-contact {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 560px) {
+  .section-tracking  {
+    width: 100%;  
+  }}
+
+@media (max-width {
+  flex: 1;
+  padding: 13px 16px;
+  font-size: 15px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 8px;
+  outline: none;
+  color: #333;
+  transition: border-color 0.2s;
+}
